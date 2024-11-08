@@ -1,0 +1,82 @@
+[
+	{
+		"name": "Wide Push-up",
+		"description": "Bodyweight * 15",
+		"set": 3
+	},
+	{
+		"name": "Diamond Push-up",
+		"description": "Bodyweight * 12",
+		"set": 3
+	},
+	{
+		"name": "Chin-up",
+		"description": "Bodyweight * 8",
+		"set": 4
+	},
+	{
+		"name": "Neutral Grip Pull-up",
+		"description": "Bodyweight * 10",
+		"set": 4
+	},
+	{
+		"name": "Bodyweight Squat",
+		"description": "Bodyweight * 20",
+		"set": 3
+	},
+	{
+		"name": "Goblet Squat",
+		"description": "25Lb * 12",
+		"set": 3
+	},
+	{
+		"name": "Walking Lunges",
+		"description": "20Lb * 10 per leg",
+		"set": 4
+	},
+	{
+		"name": "Reverse Lunges",
+		"description": "Bodyweight * 12 per leg",
+		"set": 3
+	},
+	{
+		"name": "Plank Hold",
+		"description": "Bodyweight * 60s",
+		"set": 2
+	},
+	{
+		"name": "Side Plank",
+		"description": "Bodyweight * 30s per side",
+		"set": 2
+	},
+	{
+		"name": "Leg Press Machine",
+		"description": "100Lb * 10",
+		"set": 4
+	},
+	{
+		"name": "Leg Extensions",
+		"description": "50Lb * 12",
+		"set": 3
+	},
+	{
+		"name": "Seated Overhead Press",
+		"description": "40Lb * 10",
+		"set": 4
+	},
+	{
+		"name": "Standing Overhead Press",
+		"description": "35Lb * 8",
+		"set": 4
+	},
+	{
+		"name": "Bent-over Dumbbell Row",
+		"description": "30Lb * 12",
+		"set": 3
+	},
+	{
+		"name": "Barbell Row",
+		"description": "45Lb * 10",
+		"set": 3
+	}
+]

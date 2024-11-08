@@ -102,7 +102,7 @@ body {
 }
 
 .day-content {
-	height: 80vh;
+	min-height: 80vh;
 	padding: 10px;
 
 	background-color: var(--bg-primary);
@@ -111,8 +111,8 @@ body {
 
 .day-content-header {
 	display: flex;
-	 align-items: center;
-	 justify-content: space-between;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .current-day .day-content .day-number {
@@ -127,7 +127,7 @@ body {
 
 .exercises-container {
 	margin-top: 8px;
-	
+
 	display: flex;
 	flex-direction: column;
 	gap: 8px;

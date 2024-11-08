@@ -1,16 +1,25 @@
-import { DndContext, type DragEndEvent } from "@dnd-kit/core";
+import {
+	DndContext,
+	PointerSensor,
+	useSensor,
+	useSensors,
+	type DragEndEvent,
+} from "@dnd-kit/core";
 import "./App.css";
 import { PlusIcon } from "./assets";
 import Droppable from "./components/Droppable";
 import ExerciseItem from "./components/ExerciseItem";
-import { useExercises } from "./hooks/useExercises";
+import { useExercisesContext } from "./context/ExercisesProvider";
 import { useWeekDays } from "./hooks/useWeekDays";
-import { formattedDate } from "./utils/formattedDate";
 import type { DraggableType } from "./types/draggable";
 import type { SubExercise } from "./types/exercise";
+import { formattedDate } from "./utils/formattedDate";
+import { randomId } from "./utils/randomId";
+import { pickRandomItem } from "./utils/getRandomElement";
+import exercisesJson from "./data/exercises.json";
 
 function App() {
-	const { exercises, setExercises } = useExercises();
+	const { exercises, setExercises } = useExercisesContext();
 	const { weekDays } = useWeekDays();
 
 	const handleDragEnd = ({ active, over }: DragEndEvent) => {
@@ -67,8 +76,31 @@ function App() {
 		}
 	};
 
+	const handleAddExercise = (weekDayId: string) => {
+		setExercises((prevExercises) => {
+			const newExercises = [...prevExercises];
+
+			newExercises.push({
+				id: randomId(),
+				name: pickRandomItem(exercisesJson),
+				subExercises: [],
+				weekDayId,
+			});
+
+			return newExercises;
+		});
+	};
+
+	const sensors = useSensors(
+		useSensor(PointerSensor, {
+			activationConstraint: {
+				distance: 8,
+			},
+		}),
+	);
+
 	return (
-		<DndContext onDragEnd={handleDragEnd}>
+		<DndContext onDragEnd={handleDragEnd} sensors={sensors}>
 			<div className="container">
 				<div className="weekdays-container">
 					{weekDays.map((weekDay) => {
@@ -91,7 +123,10 @@ function App() {
 											<span className="day-number">
 												{String(weekDay.day.getDate()).padStart(2, "0")}
 											</span>
-											<button type="button">
+											<button
+												type="button"
+												onClick={() => handleAddExercise(weekDay.id)}
+											>
 												<PlusIcon />
 											</button>
 										</div>
