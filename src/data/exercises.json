@@ -1,0 +1,72 @@
+[
+	{
+		"name": "Shoulder Day - Isolation",
+		"subExercises": [
+			{
+				"name": "Overhead Press",
+				"description": "75Lb * 8",
+				"set": 3
+			},
+			{
+				"name": "Lateral Raises",
+				"description": "10Lb * 12",
+				"set": 4
+			}
+		]
+	},
+	{
+		"name": "Arm Day - Biceps and Triceps",
+		"subExercises": [
+			{
+				"name": "Bicep Curls",
+				"description": "30Lb * 10",
+				"set": 3
+			},
+			{
+				"name": "Tricep Dips",
+				"description": "Bodyweight * 10",
+				"set": 4
+			}
+		]
+	},
+	{
+		"name": "Chest Day - With Trainer Pro",
+		"subExercises": [
+			{
+				"name": "Bench Press Middle",
+				"description": "50Lb * 10",
+				"set": 5
+			}
+		]
+	},
+	{
+		"name": "Leg Day - Strength Focus",
+		"subExercises": [
+			{
+				"name": "Squats",
+				"description": "100Lb * 8",
+				"set": 4
+			},
+			{
+				"name": "Leg Press",
+				"description": "150Lb * 10",
+				"set": 3
+			}
+		]
+	},
+	{
+		"name": "Back Day - Pull Exercises",
+		"subExercises": [
+			{
+				"name": "Pull Ups",
+				"description": "Bodyweight * 8",
+				"set": 3
+			},
+			{
+				"name": "Deadlift",
+				"description": "200Lb * 5",
+				"set": 4
+			}
+		]
+	}
+]

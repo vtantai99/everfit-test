@@ -1,0 +1,40 @@
+.exercise-container {
+	padding: 10px 5px;
+	border: 1px solid var(--border-primary);
+	border-radius: 6px;
+
+	background: white;
+}
+
+.exercise-header {
+	display: flex;
+	align-items: center;
+
+	gap: 10px;
+}
+
+.exercise-name {
+	color: var(--secondary);
+
+	font-weight: 700;
+	font-size: 12px;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.exercise-content {
+	margin-top: 5px;
+	min-height: 20px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.exercise-footer {
+	margin-top: 5px;
+	display: flex;
+	justify-content: flex-end;
+}

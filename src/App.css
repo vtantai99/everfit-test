@@ -1,42 +1,134 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+:root {
+	--primary: #6a7988;
+	--secondary: #5a57cb;
+	--tertiary: #919cad;
+	--quaternary: #95a6b7;
+	--bg-primary: #f3f5f8;
+	--border-primary: #22242626;
+	--shadow: #0000001a;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Remove margin and padding */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /* Ensures padding and borders are included in element's total width and height */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Remove list styling */
+ul,
+ol {
+	list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Remove text decoration from links */
+a {
+	text-decoration: none;
+	color: inherit; /* Inherit text color */
 }
 
-.card {
-  padding: 2em;
+/* Remove images' border */
+img {
+	border: 0;
+	max-width: 100%; /* Prevent images from being larger than their container */
 }
 
-.read-the-docs {
-  color: #888;
+/* Normalize table styles */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Reset form elements */
+input,
+textarea,
+button,
+select {
+	font-family: inherit;
+	font-size: inherit;
+	border: none;
+	outline: none;
+	background: none;
+	padding: 0;
+	margin: 0;
+}
+
+button {
+	cursor: pointer;
+}
+
+/* Make sure to provide a clean slate for headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+	margin: 0;
+}
+
+body {
+	font-family: "Open Sans", sans-serif;
+
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	padding: 50px;
+	height: 100%;
+}
+
+.weekdays-container {
+	display: flex;
+	gap: 10px;
+}
+
+.day-container {
+	width: calc((100% - (6 * 10px)) / 7);
+}
+
+.day-title {
+	color: var(--primary);
+	font-size: 14px;
+	font-weight: 600;
+
+	margin-bottom: 10px;
+}
+
+.day-content {
+	height: 80vh;
+	padding: 10px;
+
+	background-color: var(--bg-primary);
+	border-radius: 5px;
+}
+
+.day-content-header {
+	display: flex;
+	 align-items: center;
+	 justify-content: space-between;
+}
+
+.current-day .day-content .day-number {
+	color: var(--secondary);
+}
+
+.day-number {
+	color: var(--primary);
+	font-size: 13px;
+	font-weight: 700;
+}
+
+.exercises-container {
+	margin-top: 8px;
+	
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
 }
